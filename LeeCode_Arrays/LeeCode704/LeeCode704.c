@@ -1,10 +1,11 @@
 /*
- * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @Author: LiNing
  * @Date: 2025-01-08 00:03:12
- * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @LastEditTime: 2025-01-08 00:13:06
- * @FilePath: \LeeCode_Arrays\LeeCode704\LeeCode704.c
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @LastEditors: LiNing
+ * @LastEditTime: 2025-01-08 23:35:42
+ * @FilePath: \LeeCode_Arrays\LeeCode_Arrays\LeeCode704\LeeCode704.c
+ * @Description: 
+ * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved. 
  */
 
 #include <stdio.h>
