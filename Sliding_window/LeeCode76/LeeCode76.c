@@ -56,9 +56,11 @@ char* minWindow(char* s, char* t) {
 
 int main (void) {
     int cnt_t[128] = {}; // t 中字母的出现次数
+
     printf("%d\n", 'A');
-    int i = 'A';
-    cnt_t[i]++;
+    int i = 'A'; // 对char类型强制类型转换得到int值
+    cnt_t[i]++; 
+
     printf("%d\n", i);
     printf("%d\n", cnt_t[i]);
 }
