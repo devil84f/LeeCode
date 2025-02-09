@@ -2,7 +2,7 @@
  * @Author: LiNing
  * @Date: 2025-02-09 22:42:25
  * @LastEditors: LiNing
- * @LastEditTime: 2025-02-09 22:48:24
+ * @LastEditTime: 2025-02-09 23:55:21
  * @FilePath: \LeeCode_Modularization\dual_pointer\LeeCode206\LeeCode206.c
  * @Description: 
  * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved. 
@@ -59,13 +59,13 @@ int main () {
 
     printf("原链表: ");
     printList(head);
+    printf("%d\n", head->val);
 
     // 反转链表
     struct ListNode* reversedHead = reverseList(head);
 
     printf("反转后的链表: ");
     printList(reversedHead);
-    printf("%d", reversedHead->val);
 
     return 0;
 }
