@@ -2,7 +2,7 @@
  * @Author: LiNing
  * @Date: 2025-02-24 22:41:45
  * @LastEditors: LiNing
- * @LastEditTime: 2025-02-24 22:41:47
+ * @LastEditTime: 2025-02-26 22:48:10
  * @FilePath: \LeeCode_Modularization\Binary_tree\LeeCode144\LeeCode144.c
  * @Description: 
  * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved. 
@@ -19,25 +19,20 @@ struct TreeNode {
 };
 
 // 前序遍历函数
-void preorderTraversalHelper(struct TreeNode* root, int* result, int* index) {
+void post(struct TreeNode* root, int* ret, int* returnSize) {
     if (root == NULL) {
         return;
     }
-    // 访问根节点
-    result[(*index)++] = root->val;
-    // 递归遍历左子树
-    preorderTraversalHelper(root->left, result, index);
-    // 递归遍历右子树
-    preorderTraversalHelper(root->right, result, index);
+    post(root->left, ret, returnSize);
+    post(root->right, ret, returnSize);
+    ret[(*returnSize)++] = root->val;
 }
 
-// 返回前序遍历结果的函数
-int* preorderTraversal(struct TreeNode* root, int* returnSize) {
-    // 假设树的最大节点数为1000
-    int* result = (int*)malloc(1000 * sizeof(int));
+int* postorderTraversal(struct TreeNode* root, int* returnSize) {
+    int* ret = (int*)malloc(sizeof(int) * 100);
     *returnSize = 0;
-    preorderTraversalHelper(root, result, returnSize);
-    return result;
+    post(root, ret, returnSize);
+    return ret;
 }
 
 // 测试代码
@@ -55,7 +50,7 @@ int main() {
     n3.right = NULL;
 
     int returnSize;
-    int* result = preorderTraversal(&n1, &returnSize);
+    int* result = postorderTraversal(&n1, &returnSize);
 
     // 输出前序遍历结果
     for (int i = 0; i < returnSize; i++) {
