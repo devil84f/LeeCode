@@ -4,7 +4,7 @@
  * ¶ÑÕ»½ø½×£¬¶¯Ì¬¶ÑÕ»
  */
 
- #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 typedef struct {
