@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 int* findKDistantIndices(int* nums, int n, int key, int k, int* returnSize) {
     int *ans = malloc(n * sizeof(int));
@@ -25,7 +26,7 @@ int* findKDistantIndices(int* nums, int n, int key, int k, int* returnSize) {
 int main() {
     int nums[] = {3,4,9,1,3,9,5};
     int n = sizeof(nums)/sizeof(nums[0]);
-    int key = 9, k = 2, sz;
+    int key = 9, k = 1, sz;
     int *res = findKDistantIndices(nums, n, key, k, &sz);
     printf("result indices: ");
     for (int i = 0; i < sz; i++) {
